@@ -123,18 +123,22 @@ console.log(autoelectrico);
 
 /*3.crear una funcion tipo flecha que haga uso de la 
 clase construida y el objeto declarado*/
-class Numeros{
-    constructor(n1){
-        this.n1= n1;
+class pizzerias{
+    constructor(nombre,sede,dueño){
+    this.nombre = nombre;
+    this.sede = sede;
+    this.dueño = dueño;
     }
+}
+let pizza = new pizzerias ('Pizzatop',12,'Roberto')
+
+const Retornador = () => {
     
-}
-//voy a usar la clase para construir una operación(objeto)
-let operation = new Numeros(27)
-
-const suma = num =>{
-    return num+3;
+     return `Los datos de la pizzeria ingresada son:\n Nombre: ${pizza.nombre}  Su numero de sede es: ${pizza.sede} y su dueño es: ${pizza.dueño} `;
 }
 
-console.log(operation);
-console.log('el resultado es: '+suma(operation.n1));
+console.log(Retornador());
+
+
+
+
